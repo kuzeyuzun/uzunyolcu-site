@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="İngilizce öğrenme yol haritası ve içerik akışı" />
+  <title>İngilizce Yol Haritası | UzunYolcu</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem;}
+    header { text-align: center; margin-bottom: 2rem;}
+    h1 { color: #1e4b91;}
+    .alt-basliklar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem 0;}
+    .bolum { margin: 1.5rem 0;}
+    .bolum h2 { color: #20538d; margin-bottom: .3em;}
+    ul {margin-left: 1.2em;}
+    .note {background:#f6faff; border-left:4px solid #1e4b91; padding:1em; margin:1em 0;}
+    a { color: #1e4b91; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>İngilizce Öğrenme Yol Haritası</h1>
+    <p>Sıfırdan ileri seviyeye adım adım rehber</p>
+  </header>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
+  <section>
+    <div class="bolum">
+      <h2>Başlangıç</h2>
+      <ul>
+        <li><b><a href="ingilizce_yol_haritasi.html">Yol Haritası</a></b> (nereden başlamalı?)</li>
+        <li><b><a href="ingilizce_alfabe.html">Alfabe & Telaffuz</a></b></li>
+        <li><a href="ingilizce_selam.html">Selamlaşma & Tanışma</a></li>
+        <li><a href="ingilizce_gunluk.html">Günlük Cümleler</a></li>
+        <li><a href="ingilizce_sayilar.html">Sayılar</a></li>
+        <li><a href="ingilizce_fiiller.html">Sık Kullanılan Fiiller</a></li>
+        <li><a href="ingilizce_sifatlar.html">Sık Kullanılan Sıfatlar</a></li>
+        <li><a href="ingilizce_zarflar.html">Sık Kullanılan Zarflar</a></li>
+        <li><a href="ingilizce_kaliplar.html">Kalıplar</a></li>
+        <li><a href="ingilizce_sorular.html">Sık Kullanılan Sorular</a></li>
+      </ul>
+    </div>
+    <div class="bolum">
+      <h2>Orta Seviye</h2>
+      <ul>
+        <li><a href="ingilizce_zamanlar.html">Zamanlar (Tenses)</a></li>
+        <li><a href="ingilizce_deyimler.html">Deyimler ve Atasözleri</a></li>
+        <li><a href="ingilizce_metinler.html">Kısa Okuma Metinleri</a></li>
+        <li><a href="ingilizce_diyaloglar.html">Diyaloglar</a></li>
+        <li><a href="ingilizce_dinleme.html">Dinleme-Pratik</a></li>
+      </ul>
+    </div>
+    <div class="bolum">
+      <h2>İleri Seviye</h2>
+      <ul>
+        <li><a href="ingilizce_metinler.html">Uzun Metinler</a></li>
+        <li><a href="ingilizce_pratik.html">Kendi Pratiğin</a></li>
+        <li><a href="ingilizce_iletisim.html">İletişim Örnekleri</a></li>
+      </ul>
+    </div>
+    <div class="bolum">
+      <h2>Ekstra & Takip</h2>
+      <ul>
+        <li><a href="ingilizce_sinav.html">Mini Testler</a></li>
+        <li><a href="ingilizce_calisma_plani.html">Çalışma Planı</a></li>
+      </ul>
+    </div>
+    <div class="note">
+      <b>İpucu:</b> Her gün 5-10 dakika ayırmak, uzun aralıklarla çalışmaktan çok daha etkili!
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 UzunYolcu | İngilizce Eğitim
+  </footer>
+</body>
+</html>
