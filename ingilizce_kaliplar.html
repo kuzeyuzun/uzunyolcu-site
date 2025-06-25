@@ -3,86 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="UzunYolcu | Günlük hayatta sıkça kullanılan basit İngilizce kalıplar ve örnekler." />
+  <meta name="description" content="UzunYolcu | Günlük hayatta en çok kullanılan İngilizce kalıp cümleler ve okunuşları" />
   <title>İngilizce Kalıplar | UzunYolcu</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem; }
-    header { text-align: center; margin-bottom: 2rem; }
-    h1 { color: #1e4b91; }
-    .alt-basliklar { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0 2rem 0; flex-wrap: wrap; }
-    .alt-basliklar a { background: #d9eaff; color: #1e4b91; padding: 0.7rem 1.5rem; border-radius: 7px; text-decoration: none; font-weight: bold; transition: background 0.2s; border: 1px solid #aac6e0; }
-    .alt-basliklar a:hover { background: #bad6f4; }
-    table { width: 100%; max-width: 700px; margin: 0 auto; border-collapse: collapse; }
-    th, td { border: 1px solid #aac6e0; padding: 12px; text-align: center; }
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem;}
+    header { text-align: center; margin-bottom: 2rem;}
+    h1 { color: #1e4b91;}
+    .alt-basliklar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem 0;}
+    table { width: 100%; max-width: 700px; margin: 0 auto; border-collapse: collapse; font-size:1.07em;}
+    th, td { border: 1px solid #aac6e0; padding: 10px; text-align: center; }
     th { background-color: #d9eaff; }
-    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888; }
+    .note {background:#f6faff; border-left:4px solid #1e4b91; padding:1em; margin:1em 0;}
     a { color: #1e4b91; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888;}
   </style>
 </head>
 <body>
   <header>
-    <h1>İngilizce Kalıplar</h1>
-    <p>En basit ve en çok kullanılan kalıplarla başla, pratik yap!</p>
+    <h1>İngilizce Kalıp Cümleler</h1>
+    <p>Günlük hayatta çok işine yarayacak kalıplar ve okunuşları</p>
   </header>
-  <div class="alt-basliklar">
-    <a href="ingilizce.html">Giriş</a>
-    <a href="ingilizce_fiiller.html">İngilizce Fiiller</a>
-    <a href="ingilizce_sayilar.html">İngilizce Sayılar</a>
-  </div>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
   <section>
     <table>
       <tr>
-        <th>İngilizce Kalıp</th>
         <th>Türkçesi</th>
-        <th>Örnek Kullanım</th>
+        <th>İngilizcesi</th>
+        <th>Okunuş</th>
+        <th>Not</th>
       </tr>
       <tr>
-        <td>How are you?</td>
-        <td>Nasılsın?</td>
-        <td>How are you? I'm fine, thanks.</td>
+        <td>Lütfen</td>
+        <td>Please</td>
+        <td>Pliiz</td>
+        <td>Kibar isteklerde</td>
       </tr>
       <tr>
-        <td>Thank you</td>
         <td>Teşekkür ederim</td>
-        <td>Thank you very much!</td>
+        <td>Thank you</td>
+        <td>Tenkyu</td>
+        <td>Kibarca teşekkür</td>
       </tr>
       <tr>
-        <td>Excuse me</td>
-        <td>Affedersiniz / Pardon</td>
-        <td>Excuse me, where is the bus stop?</td>
+        <td>Bir şey değil</td>
+        <td>You’re welcome</td>
+        <td>Yur velkam</td>
+        <td>Karşılık verirken</td>
       </tr>
       <tr>
-        <td>How much is this?</td>
-        <td>Bu ne kadar?</td>
-        <td>How much is this bag?</td>
+        <td>Üzgünüm</td>
+        <td>Sorry</td>
+        <td>Sori</td>
+        <td>Özür dilerken</td>
       </tr>
       <tr>
-        <td>I don't understand</td>
-        <td>Anlamıyorum</td>
-        <td>Sorry, I don't understand.</td>
+        <td>Problem değil</td>
+        <td>No problem</td>
+        <td>No problem</td>
+        <td>Rahatlatıcı cevap</td>
       </tr>
       <tr>
-        <td>Can you help me?</td>
-        <td>Bana yardım edebilir misiniz?</td>
-        <td>Can you help me, please?</td>
+        <td>Bir dakika lütfen</td>
+        <td>One moment, please</td>
+        <td>Van momınt pliiz</td>
+        <td>Bekletirken</td>
       </tr>
       <tr>
-        <td>What time is it?</td>
-        <td>Saat kaç?</td>
-        <td>What time is it now?</td>
+        <td>Anlamadım</td>
+        <td>I didn’t understand</td>
+        <td>Ay didınt andırstend</td>
+        <td>Yardım isterken</td>
       </tr>
       <tr>
-        <td>Where are you from?</td>
-        <td>Nerelisin?</td>
-        <td>Where are you from? I'm from Turkey.</td>
+        <td>Tekrar eder misiniz?</td>
+        <td>Can you repeat?</td>
+        <td>Ken yu ripiit?</td>
+        <td>Yeniden duymak isterken</td>
       </tr>
       <tr>
-        <td>See you later</td>
-        <td>Görüşürüz</td>
-        <td>See you later, bye!</td>
+        <td>Ne demek?</td>
+        <td>What does it mean?</td>
+        <td>Vat daz it miin?</td>
+        <td>Bilinmeyen kelime</td>
+      </tr>
+      <tr>
+        <td>Benimle gelir misin?</td>
+        <td>Will you come with me?</td>
+        <td>Vil yu kam vit mi?</td>
+        <td>Davet ederken</td>
+      </tr>
+      <tr>
+        <td>Fikrim yok</td>
+        <td>I have no idea</td>
+        <td>Ay hev no aydiia</td>
+        <td>Bilmediğinizi belirtirken</td>
       </tr>
     </table>
+    <div class="note">
+      <b>İpucu:</b> Bu kalıpları sesli tekrar ederek hafızana kazıyabilirsin!
+    </div>
     <p style="text-align: center; margin-top: 1.5rem;">
       <a href="index.html">Ana Sayfa &rarr;</a>
     </p>

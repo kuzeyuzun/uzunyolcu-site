@@ -3,138 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="UzunYolcu | En sık kullanılan temel İngilizce fiillerle kolay öğrenme." />
+  <meta name="description" content="UzunYolcu | En çok kullanılan İngilizce fiiller, anlamları ve okunuşları" />
   <title>İngilizce Fiiller | UzunYolcu</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #fdfcf7, #ffffff);
-      color: #1f2e45;
-      padding: 2rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      color: #8c6d1f;
-    }
-    table {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #e0d4aa;
-      padding: 12px;
-      text-align: center;
-    }
-    th {
-      background-color: #f3e8bc;
-    }
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    a {
-      color: #8c6d1f;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem;}
+    header { text-align: center; margin-bottom: 2rem;}
+    h1 { color: #1e4b91;}
+    .alt-basliklar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem 0;}
+    table { width: 100%; max-width: 700px; margin: 0 auto; border-collapse: collapse; font-size:1.08em;}
+    th, td { border: 1px solid #aac6e0; padding: 10px; text-align: center; }
+    th { background-color: #d9eaff; }
+    .note {background:#f6faff; border-left:4px solid #1e4b91; padding:1em; margin:1em 0;}
+    a { color: #1e4b91; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888;}
   </style>
 </head>
 <body>
   <header>
-    <h1>Temel İngilizce Fiiller</h1>
-    <p>Günlük hayatta en çok kullanılan 10 fiil</p>
+    <h1>En Çok Kullanılan İngilizce Fiiller</h1>
+    <p>Fiiller, anlamları ve okunuşlarıyla birlikte!</p>
   </header>
-
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
   <section>
     <table>
       <tr>
-        <th>Türkçe</th>
-        <th>İngilizce</th>
+        <th>İngilizcesi</th>
+        <th>Türkçesi</th>
         <th>Okunuş</th>
-        <th>Not</th>
+        <th>Örnek Cümle</th>
       </tr>
       <tr>
-        <td>olmak</td>
         <td>be</td>
+        <td>olmak</td>
         <td>bi</td>
-        <td>I am / You are</td>
+        <td>I want to be a doctor. <i>(Ay vant tu bi e doktor.)</i></td>
       </tr>
       <tr>
-        <td>yapmak</td>
         <td>do</td>
+        <td>yapmak</td>
         <td>du</td>
-        <td>Do homework</td>
+        <td>I do my homework. <i>(Ay du may homvörk.)</i></td>
       </tr>
       <tr>
+        <td>go</td>
         <td>gitmek</td>
         <td>go</td>
-        <td>go</td>
-        <td>Go to school</td>
+        <td>I go to school. <i>(Ay go tu skul.)</i></td>
       </tr>
       <tr>
-        <td>almak</td>
-        <td>get</td>
-        <td>get</td>
-        <td>Get ready</td>
-      </tr>
-      <tr>
-        <td>görmek</td>
-        <td>see</td>
-        <td>sii</td>
-        <td>See you later</td>
-      </tr>
-      <tr>
-        <td>söylemek</td>
-        <td>say</td>
-        <td>sey</td>
-        <td>Say hello</td>
-      </tr>
-      <tr>
-        <td>gelmek</td>
         <td>come</td>
+        <td>gelmek</td>
         <td>kam</td>
-        <td>Come here</td>
+        <td>Come here, please. <i>(Kam hiır, pliiz.)</i></td>
       </tr>
       <tr>
-        <td>düşünmek</td>
-        <td>think</td>
-        <td>tink</td>
-        <td>Think about it</td>
+        <td>see</td>
+        <td>görmek</td>
+        <td>si</td>
+        <td>I see a bird. <i>(Ay si e börd.)</i></td>
       </tr>
       <tr>
-        <td>bilmek</td>
-        <td>know</td>
-        <td>nou</td>
-        <td>I know</td>
+        <td>make</td>
+        <td>yapmak (üretmek)</td>
+        <td>meyk</td>
+        <td>I make tea. <i>(Ay meyk ti.)</i></td>
       </tr>
       <tr>
-        <td>istemek</td>
+        <td>have</td>
+        <td>sahip olmak</td>
+        <td>hev</td>
+        <td>I have a car. <i>(Ay hev e kar.)</i></td>
+      </tr>
+      <tr>
+        <td>get</td>
+        <td>almak, edinmek</td>
+        <td>get</td>
+        <td>I get up early. <i>(Ay get ap örli.)</i></td>
+      </tr>
+      <tr>
+        <td>take</td>
+        <td>almak</td>
+        <td>teyk</td>
+        <td>Take this pen. <i>(Teyk dis pen.)</i></td>
+      </tr>
+      <tr>
+        <td>give</td>
+        <td>vermek</td>
+        <td>giv</td>
+        <td>Give me water. <i>(Giv mi votır.)</i></td>
+      </tr>
+      <tr>
+        <td>eat</td>
+        <td>yemek (fiil)</td>
+        <td>iit</td>
+        <td>I eat breakfast. <i>(Ay iit brekfıst.)</i></td>
+      </tr>
+      <tr>
+        <td>drink</td>
+        <td>içmek</td>
+        <td>drink</td>
+        <td>I drink tea. <i>(Ay drink ti.)</i></td>
+      </tr>
+      <tr>
+        <td>say</td>
+        <td>demek, söylemek</td>
+        <td>sey</td>
+        <td>What did you say? <i>(Vat did yu sey?)</i></td>
+      </tr>
+      <tr>
+        <td>like</td>
+        <td>sevmek</td>
+        <td>layk</td>
+        <td>I like music. <i>(Ay layk miuzik.)</i></td>
+      </tr>
+      <tr>
         <td>want</td>
-        <td>wont</td>
-        <td>I want tea</td>
+        <td>istemek</td>
+        <td>vant</td>
+        <td>I want water. <i>(Ay vant votır.)</i></td>
       </tr>
+      <!-- Daha fazla fiil eklenebilir -->
     </table>
+    <div class="note">
+      <b>İpucu:</b> Her gün yeni bir fiili bir cümleyle kullanmak, öğrenmeni hızlandırır!
+    </div>
     <p style="text-align: center; margin-top: 1.5rem;">
-      ✨ <em>Bu fiilleri ezberle ve kendi cümlelerini kurmaya başla!</em>
-    </p>
-
-    <p style="text-align: center;">
-      <a href="index.html">Ana Sayfa &rarr;</a> | <a href="ingilizce.html">Selamlaşma &rarr;</a>
+      <a href="index.html">Ana Sayfa &rarr;</a>
     </p>
   </section>
-
   <footer>
-    &copy; 2025 UzunYolcu | İngilizce Eğitim Sayfası
+    &copy; 2025 UzunYolcu | İngilizce Eğitim
   </footer>
 </body>
 </html>

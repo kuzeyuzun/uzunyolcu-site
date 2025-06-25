@@ -3,141 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="UzunYolcu | Temel seviyeden ileri seviyeye İngilizce öğretici içerikler." />
-  <title>İngilizce Öğren | UzunYolcu</title>
+  <meta name="description" content="UzunYolcu | Sıfırdan ileri seviyeye İngilizce öğrenme rehberi ve içerik menüsü" />
+  <title>İngilizce Öğrenme | UzunYolcu</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #eef6ff, #ffffff);
-      color: #1f2e45;
-      padding: 2rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      color: #1e4b91;
-    }
-    h2 {
-      color: #20538d;
-      margin-top: 2.5rem;
-      text-align: center;
-    }
-    .alt-basliklar {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1.5rem 0 2rem 0;
-      flex-wrap: wrap;
-    }
-    .alt-basliklar a {
-      background: #d9eaff;
-      color: #1e4b91;
-      padding: 0.7rem 1.5rem;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s;
-      border: 1px solid #aac6e0;
-    }
-    .alt-basliklar a:hover {
-      background: #bad6f4;
-    }
-    table {
-      width: 100%;
-      max-width: 700px;
-      margin: 0 auto;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #aac6e0;
-      padding: 12px;
-      text-align: center;
-    }
-    th {
-      background-color: #d9eaff;
-    }
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    a {
-      color: #1e4b91;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem;}
+    header { text-align: center; margin-bottom: 2rem;}
+    h1 { color: #1e4b91;}
+    .alt-basliklar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem 0;}
+    .section { background: #f6faff; border: 1px solid #aac6e0; border-radius: 7px; padding: 1.2em; margin-bottom: 1.5em; max-width: 750px; margin-left:auto; margin-right:auto;}
+    ul {margin-left: 1.2em;}
+    .note {background:#e1f7d5; border-left:4px solid #4caf50; padding:.9em; margin:1em 0;}
+    a { color: #1e4b91; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888;}
   </style>
 </head>
 <body>
   <header>
-    <h1>İngilizce Öğrenmeye Hoş Geldin</h1>
-    <p>Bugün: Selamlaşma ve Tanışma Kalıpları</p>
+    <h1>İngilizce Öğrenme Rehberi</h1>
+    <p>Sıfırdan ileri seviyeye İngilizce içerikleri ve yol haritası</p>
   </header>
-
-  <section>
-    <div class="alt-basliklar">
-      <a href="ingilizce_fiiller.html">İngilizce Fiiller</a>
-      <a href="ingilizce_kaliplar.html">İngilizce Kalıplar</a>
-      <a href="ingilizce_sayilar.html">İngilizce Sayılar</a>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
+  <section class="section">
+    <h2>Nasıl Başlamalıyım?</h2>
+    <p>İngilizce öğrenmeye başlamak için önce temel alfabe, selamlaşma ve günlük ifadeleri öğrenmek çok önemlidir. Sonrasında ise sık kullanılan fiiller, kalıplar ve zaman bilgisiyle devam etmelisin.</p>
+    <ul>
+      <li><b>Alfabe ve Telaffuz:</b> <a href="ingilizce_alfabe.html">Tüm harfler ve okunuşları</a></li>
+      <li><b>Selamlaşma & Tanışma:</b> <a href="ingilizce_selam.html">En temel ifadeler</a></li>
+      <li><b>Günlük Cümleler:</b> <a href="ingilizce_gunluk.html">Hayatta sıkça kullanılanlar</a></li>
+      <li><b>Sayılar:</b> <a href="ingilizce_sayilar.html">1-100 ve ötesi</a></li>
+      <li><b>Fiiller:</b> <a href="ingilizce_fiiller.html">Temel ve önemli eylemler</a></li>
+      <li><b>Kalıplar:</b> <a href="ingilizce_kaliplar.html">Hemen kullanabileceğin yapılar</a></li>
+    </ul>
+    <div class="note">
+      <b>İpucu:</b> Her gün kısa tekrarlar yapmak, uzun aralıklarla çalışmaktan daha hızlı ilerlemeni sağlar!
     </div>
-    <table>
-      <tr>
-        <th>Türkçe</th>
-        <th>İngilizce</th>
-        <th>Okunuş (Rehber)</th>
-      </tr>
-      <tr>
-        <td>Merhaba</td>
-        <td>Hello</td>
-        <td>he-lo</td>
-      </tr>
-      <tr>
-        <td>Günaydın</td>
-        <td>Good morning</td>
-        <td>gud mornin</td>
-      </tr>
-      <tr>
-        <td>Nasılsın?</td>
-        <td>How are you?</td>
-        <td>hav ar yu</td>
-      </tr>
-      <tr>
-        <td>Ben iyiyim</td>
-        <td>I'm fine</td>
-        <td>ay'm fayn</td>
-      </tr>
-      <tr>
-        <td>Adın ne?</td>
-        <td>What's your name?</td>
-        <td>whats yor neym</td>
-      </tr>
-      <tr>
-        <td>Benim adım Kuzey</td>
-        <td>My name is Kuzey</td>
-        <td>may neym iz Kuzey</td>
-      </tr>
-      <tr>
-        <td>Memnun oldum</td>
-        <td>Nice to meet you</td>
-        <td>nays tu miit yu</td>
-      </tr>
-    </table>
-    <p style="text-align: center; margin-top: 1.5rem;">
-      ✨ <em>Her gün sadece 3-5 cümle öğren, 1 haftada farkı hissedeceksin!</em>
-    </p>
-    <p style="text-align: center;">
-      <a href="index.html">Ana Sayfa &rarr;</a>
-    </p>
   </section>
-
+  <section class="section">
+    <h2>İçerik Akışı</h2>
+    <ul>
+      <li>Başlangıç: Alfabe, selamlaşma, günlük cümleler, sayılar</li>
+      <li>Temel: Fiiller, kalıplar, sık sorulan sorular</li>
+      <li>Orta Seviye: Zamanlar, deyimler, metinler, diyaloglar</li>
+      <li>İleri Seviye: Uzun metinler, iletişim örnekleri, kendi pratiğin</li>
+      <li>Ekstra: Dinleme, pratik, mini testler, çalışma planı</li>
+    </ul>
+    <p>Tüm başlıklar için menüyü kullanabilirsin.</p>
+  </section>
   <footer>
-    &copy; 2025 UzunYolcu | İngilizce Eğitim Sayfası
+    &copy; 2025 UzunYolcu | İngilizce Eğitim
   </footer>
 </body>
 </html>
