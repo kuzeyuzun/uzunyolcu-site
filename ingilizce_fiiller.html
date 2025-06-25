@@ -5,11 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="UzunYolcu | En çok kullanılan İngilizce fiiller, anlamları ve okunuşları" />
   <title>İngilizce Fiiller | UzunYolcu</title>
+  <link rel="stylesheet" href="side-menu.css"/>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem;}
-    header { text-align: center; margin-bottom: 2rem;}
-    h1 { color: #1e4b91;}
-    .alt-basliklar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem 0;}
     table { width: 100%; max-width: 700px; margin: 0 auto; border-collapse: collapse; font-size:1.08em;}
     th, td { border: 1px solid #aac6e0; padding: 10px; text-align: center; }
     th { background-color: #d9eaff; }
@@ -20,125 +17,128 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>En Çok Kullanılan İngilizce Fiiller</h1>
-    <p>Fiiller, anlamları ve okunuşlarıyla birlikte!</p>
-  </header>
-  <div id="altBasliklarMenu"></div>
+  <div class="page-container">
+    <div id="sideMenuArea"></div>
+    <main class="main-content">
+      <header>
+        <h1>En Çok Kullanılan İngilizce Fiiller</h1>
+        <p>Fiiller, anlamları ve okunuşlarıyla birlikte!</p>
+      </header>
+      <section>
+        <table>
+          <tr>
+            <th>İngilizcesi</th>
+            <th>Türkçesi</th>
+            <th>Okunuş</th>
+            <th>Örnek Cümle</th>
+          </tr>
+          <tr>
+            <td>be</td>
+            <td>olmak</td>
+            <td>bi</td>
+            <td>I want to be a doctor. <i>(Ay vant tu bi e doktor.)</i></td>
+          </tr>
+          <tr>
+            <td>do</td>
+            <td>yapmak</td>
+            <td>du</td>
+            <td>I do my homework. <i>(Ay du may homvörk.)</i></td>
+          </tr>
+          <tr>
+            <td>go</td>
+            <td>gitmek</td>
+            <td>go</td>
+            <td>I go to school. <i>(Ay go tu skul.)</i></td>
+          </tr>
+          <tr>
+            <td>come</td>
+            <td>gelmek</td>
+            <td>kam</td>
+            <td>Come here, please. <i>(Kam hiır, pliiz.)</i></td>
+          </tr>
+          <tr>
+            <td>see</td>
+            <td>görmek</td>
+            <td>si</td>
+            <td>I see a bird. <i>(Ay si e börd.)</i></td>
+          </tr>
+          <tr>
+            <td>make</td>
+            <td>yapmak (üretmek)</td>
+            <td>meyk</td>
+            <td>I make tea. <i>(Ay meyk ti.)</i></td>
+          </tr>
+          <tr>
+            <td>have</td>
+            <td>sahip olmak</td>
+            <td>hev</td>
+            <td>I have a car. <i>(Ay hev e kar.)</i></td>
+          </tr>
+          <tr>
+            <td>get</td>
+            <td>almak, edinmek</td>
+            <td>get</td>
+            <td>I get up early. <i>(Ay get ap örli.)</i></td>
+          </tr>
+          <tr>
+            <td>take</td>
+            <td>almak</td>
+            <td>teyk</td>
+            <td>Take this pen. <i>(Teyk dis pen.)</i></td>
+          </tr>
+          <tr>
+            <td>give</td>
+            <td>vermek</td>
+            <td>giv</td>
+            <td>Give me water. <i>(Giv mi votır.)</i></td>
+          </tr>
+          <tr>
+            <td>eat</td>
+            <td>yemek (fiil)</td>
+            <td>iit</td>
+            <td>I eat breakfast. <i>(Ay iit brekfıst.)</i></td>
+          </tr>
+          <tr>
+            <td>drink</td>
+            <td>içmek</td>
+            <td>drink</td>
+            <td>I drink tea. <i>(Ay drink ti.)</i></td>
+          </tr>
+          <tr>
+            <td>say</td>
+            <td>demek, söylemek</td>
+            <td>sey</td>
+            <td>What did you say? <i>(Vat did yu sey?)</i></td>
+          </tr>
+          <tr>
+            <td>like</td>
+            <td>sevmek</td>
+            <td>layk</td>
+            <td>I like music. <i>(Ay layk miuzik.)</i></td>
+          </tr>
+          <tr>
+            <td>want</td>
+            <td>istemek</td>
+            <td>vant</td>
+            <td>I want water. <i>(Ay vant votır.)</i></td>
+          </tr>
+        </table>
+        <div class="note">
+          <b>İpucu:</b> Her gün yeni bir fiili bir cümleyle kullanmak, öğrenmeni hızlandırır!
+        </div>
+        <p style="text-align: center; margin-top: 1.5rem;">
+          <a href="index.html">Ana Sayfa &rarr;</a>
+        </p>
+      </section>
+      <footer>
+        &copy; 2025 UzunYolcu | İngilizce Eğitim
+      </footer>
+    </main>
+  </div>
   <script>
     fetch('alt-basliklar.html')
       .then(response => response.text())
-      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+      .then(html => document.getElementById('sideMenuArea').innerHTML = html);
   </script>
-  <section>
-    <table>
-      <tr>
-        <th>İngilizcesi</th>
-        <th>Türkçesi</th>
-        <th>Okunuş</th>
-        <th>Örnek Cümle</th>
-      </tr>
-      <tr>
-        <td>be</td>
-        <td>olmak</td>
-        <td>bi</td>
-        <td>I want to be a doctor. <i>(Ay vant tu bi e doktor.)</i></td>
-      </tr>
-      <tr>
-        <td>do</td>
-        <td>yapmak</td>
-        <td>du</td>
-        <td>I do my homework. <i>(Ay du may homvörk.)</i></td>
-      </tr>
-      <tr>
-        <td>go</td>
-        <td>gitmek</td>
-        <td>go</td>
-        <td>I go to school. <i>(Ay go tu skul.)</i></td>
-      </tr>
-      <tr>
-        <td>come</td>
-        <td>gelmek</td>
-        <td>kam</td>
-        <td>Come here, please. <i>(Kam hiır, pliiz.)</i></td>
-      </tr>
-      <tr>
-        <td>see</td>
-        <td>görmek</td>
-        <td>si</td>
-        <td>I see a bird. <i>(Ay si e börd.)</i></td>
-      </tr>
-      <tr>
-        <td>make</td>
-        <td>yapmak (üretmek)</td>
-        <td>meyk</td>
-        <td>I make tea. <i>(Ay meyk ti.)</i></td>
-      </tr>
-      <tr>
-        <td>have</td>
-        <td>sahip olmak</td>
-        <td>hev</td>
-        <td>I have a car. <i>(Ay hev e kar.)</i></td>
-      </tr>
-      <tr>
-        <td>get</td>
-        <td>almak, edinmek</td>
-        <td>get</td>
-        <td>I get up early. <i>(Ay get ap örli.)</i></td>
-      </tr>
-      <tr>
-        <td>take</td>
-        <td>almak</td>
-        <td>teyk</td>
-        <td>Take this pen. <i>(Teyk dis pen.)</i></td>
-      </tr>
-      <tr>
-        <td>give</td>
-        <td>vermek</td>
-        <td>giv</td>
-        <td>Give me water. <i>(Giv mi votır.)</i></td>
-      </tr>
-      <tr>
-        <td>eat</td>
-        <td>yemek (fiil)</td>
-        <td>iit</td>
-        <td>I eat breakfast. <i>(Ay iit brekfıst.)</i></td>
-      </tr>
-      <tr>
-        <td>drink</td>
-        <td>içmek</td>
-        <td>drink</td>
-        <td>I drink tea. <i>(Ay drink ti.)</i></td>
-      </tr>
-      <tr>
-        <td>say</td>
-        <td>demek, söylemek</td>
-        <td>sey</td>
-        <td>What did you say? <i>(Vat did yu sey?)</i></td>
-      </tr>
-      <tr>
-        <td>like</td>
-        <td>sevmek</td>
-        <td>layk</td>
-        <td>I like music. <i>(Ay layk miuzik.)</i></td>
-      </tr>
-      <tr>
-        <td>want</td>
-        <td>istemek</td>
-        <td>vant</td>
-        <td>I want water. <i>(Ay vant votır.)</i></td>
-      </tr>
-      <!-- Daha fazla fiil eklenebilir -->
-    </table>
-    <div class="note">
-      <b>İpucu:</b> Her gün yeni bir fiili bir cümleyle kullanmak, öğrenmeni hızlandırır!
-    </div>
-    <p style="text-align: center; margin-top: 1.5rem;">
-      <a href="index.html">Ana Sayfa &rarr;</a>
-    </p>
-  </section>
-  <footer>
-    &copy; 2025 UzunYolcu | İngilizce Eğitim
-  </footer>
 </body>
 </html>

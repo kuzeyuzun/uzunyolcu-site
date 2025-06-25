@@ -5,12 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="UzunYolcu | Sıfırdan ileri seviyeye İngilizce öğrenme rehberi ve içerik menüsü" />
   <title>İngilizce Öğrenme | UzunYolcu</title>
+  <link rel="stylesheet" href="side-menu.css"/>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem;}
-    header { text-align: center; margin-bottom: 2rem;}
-    h1 { color: #1e4b91;}
-    .alt-basliklar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem 0;}
-    .section { background: #f6faff; border: 1px solid #aac6e0; border-radius: 7px; padding: 1.2em; margin-bottom: 1.5em; max-width: 750px; margin-left:auto; margin-right:auto;}
+    .section { background: #f6faff; border: 1px solid #aac6e0; border-radius: 7px; padding: 1.2em; margin-bottom: 1.5em;}
     ul {margin-left: 1.2em;}
     .note {background:#e1f7d5; border-left:4px solid #4caf50; padding:.9em; margin:1em 0;}
     a { color: #1e4b91; text-decoration: none; }
@@ -19,44 +16,48 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>İngilizce Öğrenme Rehberi</h1>
-    <p>Sıfırdan ileri seviyeye İngilizce içerikleri ve yol haritası</p>
-  </header>
-  <div id="altBasliklarMenu"></div>
+  <div class="page-container">
+    <div id="sideMenuArea"></div>
+    <main class="main-content">
+      <header>
+        <h1>İngilizce Öğrenme Rehberi</h1>
+        <p>Sıfırdan ileri seviyeye İngilizce içerikleri ve yol haritası</p>
+      </header>
+      <section class="section">
+        <h2>Nasıl Başlamalıyım?</h2>
+        <p>İngilizce öğrenmeye başlamak için önce temel alfabe, selamlaşma ve günlük ifadeleri öğrenmek çok önemlidir. Sonrasında ise sık kullanılan fiiller, kalıplar ve zaman bilgisiyle devam etmelisin.</p>
+        <ul>
+          <li><b>Alfabe ve Telaffuz:</b> <a href="ingilizce_alfabe.html">Tüm harfler ve okunuşları</a></li>
+          <li><b>Selamlaşma & Tanışma:</b> <a href="ingilizce_selam.html">En temel ifadeler</a></li>
+          <li><b>Günlük Cümleler:</b> <a href="ingilizce_gunluk.html">Hayatta sıkça kullanılanlar</a></li>
+          <li><b>Sayılar:</b> <a href="ingilizce_sayilar.html">1-100 ve ötesi</a></li>
+          <li><b>Fiiller:</b> <a href="ingilizce_fiiller.html">Temel ve önemli eylemler</a></li>
+          <li><b>Kalıplar:</b> <a href="ingilizce_kaliplar.html">Hemen kullanabileceğin yapılar</a></li>
+        </ul>
+        <div class="note">
+          <b>İpucu:</b> Her gün kısa tekrarlar yapmak, uzun aralıklarla çalışmaktan daha hızlı ilerlemeni sağlar!
+        </div>
+      </section>
+      <section class="section">
+        <h2>İçerik Akışı</h2>
+        <ul>
+          <li>Başlangıç: Alfabe, selamlaşma, günlük cümleler, sayılar</li>
+          <li>Temel: Fiiller, kalıplar, sık sorulan sorular</li>
+          <li>Orta Seviye: Zamanlar, deyimler, metinler, diyaloglar</li>
+          <li>İleri Seviye: Uzun metinler, iletişim örnekleri, kendi pratiğin</li>
+          <li>Ekstra: Dinleme, pratik, mini testler, çalışma planı</li>
+        </ul>
+        <p>Tüm başlıklar için menüyü kullanabilirsin.</p>
+      </section>
+      <footer>
+        &copy; 2025 UzunYolcu | İngilizce Eğitim
+      </footer>
+    </main>
+  </div>
   <script>
     fetch('alt-basliklar.html')
       .then(response => response.text())
-      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+      .then(html => document.getElementById('sideMenuArea').innerHTML = html);
   </script>
-  <section class="section">
-    <h2>Nasıl Başlamalıyım?</h2>
-    <p>İngilizce öğrenmeye başlamak için önce temel alfabe, selamlaşma ve günlük ifadeleri öğrenmek çok önemlidir. Sonrasında ise sık kullanılan fiiller, kalıplar ve zaman bilgisiyle devam etmelisin.</p>
-    <ul>
-      <li><b>Alfabe ve Telaffuz:</b> <a href="ingilizce_alfabe.html">Tüm harfler ve okunuşları</a></li>
-      <li><b>Selamlaşma & Tanışma:</b> <a href="ingilizce_selam.html">En temel ifadeler</a></li>
-      <li><b>Günlük Cümleler:</b> <a href="ingilizce_gunluk.html">Hayatta sıkça kullanılanlar</a></li>
-      <li><b>Sayılar:</b> <a href="ingilizce_sayilar.html">1-100 ve ötesi</a></li>
-      <li><b>Fiiller:</b> <a href="ingilizce_fiiller.html">Temel ve önemli eylemler</a></li>
-      <li><b>Kalıplar:</b> <a href="ingilizce_kaliplar.html">Hemen kullanabileceğin yapılar</a></li>
-    </ul>
-    <div class="note">
-      <b>İpucu:</b> Her gün kısa tekrarlar yapmak, uzun aralıklarla çalışmaktan daha hızlı ilerlemeni sağlar!
-    </div>
-  </section>
-  <section class="section">
-    <h2>İçerik Akışı</h2>
-    <ul>
-      <li>Başlangıç: Alfabe, selamlaşma, günlük cümleler, sayılar</li>
-      <li>Temel: Fiiller, kalıplar, sık sorulan sorular</li>
-      <li>Orta Seviye: Zamanlar, deyimler, metinler, diyaloglar</li>
-      <li>İleri Seviye: Uzun metinler, iletişim örnekleri, kendi pratiğin</li>
-      <li>Ekstra: Dinleme, pratik, mini testler, çalışma planı</li>
-    </ul>
-    <p>Tüm başlıklar için menüyü kullanabilirsin.</p>
-  </section>
-  <footer>
-    &copy; 2025 UzunYolcu | İngilizce Eğitim
-  </footer>
 </body>
 </html>
