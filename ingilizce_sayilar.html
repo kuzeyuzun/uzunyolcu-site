@@ -3,57 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="UzunYolcu | İngilizce sayılar ve okunuşları." />
+  <meta name="description" content="UzunYolcu | İngilizce'de sayılar, okunuşları ve örnek kullanımlar" />
   <title>İngilizce Sayılar | UzunYolcu</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem; }
-    header { text-align: center; margin-bottom: 2rem; }
-    h1 { color: #1e4b91; }
-    .alt-basliklar { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0 2rem 0; flex-wrap: wrap; }
-    .alt-basliklar a { background: #d9eaff; color: #1e4b91; padding: 0.7rem 1.5rem; border-radius: 7px; text-decoration: none; font-weight: bold; transition: background 0.2s; border: 1px solid #aac6e0; }
-    .alt-basliklar a:hover { background: #bad6f4; }
-    table { width: 100%; max-width: 700px; margin: 0 auto; border-collapse: collapse; }
-    th, td { border: 1px solid #aac6e0; padding: 12px; text-align: center; }
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem;}
+    header { text-align: center; margin-bottom: 2rem;}
+    h1 { color: #1e4b91;}
+    .alt-basliklar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem 0;}
+    table { width: 100%; max-width: 650px; margin: 0 auto; border-collapse: collapse;}
+    th, td { border: 1px solid #aac6e0; padding: 10px; text-align: center; }
     th { background-color: #d9eaff; }
-    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888; }
+    .note {background:#f6faff; border-left:4px solid #1e4b91; padding:1em; margin:1em 0;}
     a { color: #1e4b91; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888;}
   </style>
 </head>
 <body>
   <header>
     <h1>İngilizce Sayılar</h1>
-    <p>Temel sayılar ve okunuşları</p>
+    <p>1'den 100'e kadar ve temel sayıların okunuşları, örnek kullanımlar</p>
   </header>
-  <div class="alt-basliklar">
-    <a href="ingilizce.html">Giriş</a>
-    <a href="ingilizce_fiiller.html">İngilizce Fiiller</a>
-    <a href="ingilizce_kaliplar.html">İngilizce Kalıplar</a>
-  </div>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
   <section>
     <table>
       <tr>
-        <th>Türkçe</th>
-        <th>İngilizce</th>
+        <th>Sayı</th>
+        <th>İngilizcesi</th>
         <th>Okunuş</th>
       </tr>
-      <tr>
-        <td>Bir</td>
-        <td>One</td>
-        <td>van</td>
-      </tr>
-      <tr>
-        <td>İki</td>
-        <td>Two</td>
-        <td>tu</td>
-      </tr>
-      <tr>
-        <td>Üç</td>
-        <td>Three</td>
-        <td>thri</td>
-      </tr>
-      <!-- Daha fazla sayı eklenebilir -->
+      <tr><td>0</td><td>zero</td><td>ziro</td></tr>
+      <tr><td>1</td><td>one</td><td>van</td></tr>
+      <tr><td>2</td><td>two</td><td>tu</td></tr>
+      <tr><td>3</td><td>three</td><td>thrii</td></tr>
+      <tr><td>4</td><td>four</td><td>for</td></tr>
+      <tr><td>5</td><td>five</td><td>fayv</td></tr>
+      <tr><td>6</td><td>six</td><td>siks</td></tr>
+      <tr><td>7</td><td>seven</td><td>sevın</td></tr>
+      <tr><td>8</td><td>eight</td><td>eyt</td></tr>
+      <tr><td>9</td><td>nine</td><td>nayn</td></tr>
+      <tr><td>10</td><td>ten</td><td>ten</td></tr>
+      <tr><td>11</td><td>eleven</td><td>ilevın</td></tr>
+      <tr><td>12</td><td>twelve</td><td>tuelv</td></tr>
+      <tr><td>13</td><td>thirteen</td><td>thörtiin</td></tr>
+      <tr><td>14</td><td>fourteen</td><td>fortiin</td></tr>
+      <tr><td>15</td><td>fifteen</td><td>fiftin</td></tr>
+      <tr><td>16</td><td>sixteen</td><td>sikstin</td></tr>
+      <tr><td>17</td><td>seventeen</td><td>sevıntin</td></tr>
+      <tr><td>18</td><td>eighteen</td><td>eytin</td></tr>
+      <tr><td>19</td><td>nineteen</td><td>nayntin</td></tr>
+      <tr><td>20</td><td>twenty</td><td>tüventi</td></tr>
+      <tr><td>30</td><td>thirty</td><td>thörti</td></tr>
+      <tr><td>40</td><td>forty</td><td>forti</td></tr>
+      <tr><td>50</td><td>fifty</td><td>fifti</td></tr>
+      <tr><td>60</td><td>sixty</td><td>siksti</td></tr>
+      <tr><td>70</td><td>seventy</td><td>sevınti</td></tr>
+      <tr><td>80</td><td>eighty</td><td>eyti</td></tr>
+      <tr><td>90</td><td>ninety</td><td>naynti</td></tr>
+      <tr><td>100</td><td>one hundred</td><td>van handrıt</td></tr>
+      <tr><td>1000</td><td>one thousand</td><td>van tauzınd</td></tr>
+      <tr><td>1.000.000</td><td>one million</td><td>van milyın</td></tr>
     </table>
+    <div class="note">
+      <b>Örnek Kullanımlar:</b>
+      <ul>
+        <li>I have two cats. <i>(Ay hev tu kets.)</i> - İki kedim var.</li>
+        <li>He is twenty years old. <i>(Hi iz tüventi yirz old.)</i> - O, yirmi yaşında.</li>
+        <li>My phone number is zero five... <i>(May fon nambır iz ziro fayv...)</i></li>
+      </ul>
+    </div>
     <p style="text-align: center; margin-top: 1.5rem;">
       <a href="index.html">Ana Sayfa &rarr;</a>
     </p>
