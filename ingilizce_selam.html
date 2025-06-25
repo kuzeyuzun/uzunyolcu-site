@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UzunYolcu | İngilizce Selamlaşma ve Tanışma Kalıpları (Türkçe okunuşlu)" />
+  <title>İngilizce Selamlaşma ve Tanışma | UzunYolcu</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem; }
+    header { text-align: center; margin-bottom: 2rem; }
+    h1 { color: #1e4b91; }
+    .alt-basliklar { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0 2rem 0; flex-wrap: wrap; }
+    .alt-basliklar a { background: #d9eaff; color: #1e4b91; padding: 0.7rem 1.5rem; border-radius: 7px; text-decoration: none; font-weight: bold; transition: background 0.2s; border: 1px solid #aac6e0; }
+    .alt-basliklar a:hover { background: #bad6f4; }
+    table { width: 100%; max-width: 700px; margin: 0 auto; border-collapse: collapse; }
+    th, td { border: 1px solid #aac6e0; padding: 12px; text-align: center; }
+    th { background-color: #d9eaff; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888; }
+    a { color: #1e4b91; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>İngilizce Selamlaşma ve Tanışma</h1>
+    <p>En temel ifadeler ve okunuşları</p>
+  </header>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
+  <section>
+    <table>
+      <tr>
+        <th>Türkçesi</th>
+        <th>İngilizcesi</th>
+        <th>Okunuş</th>
+      </tr>
+      <tr>
+        <td>Merhaba</td>
+        <td>Hello</td>
+        <td>He-lo</td>
+      </tr>
+      <tr>
+        <td>Günaydın</td>
+        <td>Good morning</td>
+        <td>Gud mornin</td>
+      </tr>
+      <tr>
+        <td>İyi akşamlar</td>
+        <td>Good evening</td>
+        <td>Gud ivning</td>
+      </tr>
+      <tr>
+        <td>İyi geceler</td>
+        <td>Good night</td>
+        <td>Gud nayt</td>
+      </tr>
+      <tr>
+        <td>Nasılsın?</td>
+        <td>How are you?</td>
+        <td>Hav ar yu?</td>
+      </tr>
+      <tr>
+        <td>Ben iyiyim</td>
+        <td>I'm fine</td>
+        <td>Aym fayn</td>
+      </tr>
+      <tr>
+        <td>Adın ne?</td>
+        <td>What’s your name?</td>
+        <td>Vats yor neym?</td>
+      </tr>
+      <tr>
+        <td>Benim adım ...</td>
+        <td>My name is ...</td>
+        <td>May neym iz ...</td>
+      </tr>
+      <tr>
+        <td>Tanıştığımıza memnun oldum</td>
+        <td>Nice to meet you</td>
+        <td>Nays tu mit yu</td>
+      </tr>
+      <tr>
+        <td>Hoşça kal</td>
+        <td>Goodbye</td>
+        <td>Gudbay</td>
+      </tr>
+      <tr>
+        <td>Görüşürüz</td>
+        <td>See you</td>
+        <td>See yu</td>
+      </tr>
+    </table>
+    <p style="text-align: center; margin-top: 1.5rem;">
+      <a href="index.html">Ana Sayfa &rarr;</a>
+    </p>
+  </section>
+  <footer>
+    &copy; 2025 UzunYolcu | İngilizce Eğitim
+  </footer>
+</body>
+</html>
