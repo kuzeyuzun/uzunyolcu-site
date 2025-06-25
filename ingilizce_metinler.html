@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UzunYolcu | Başlangıç ve orta seviye kısa İngilizce metinler, okunuş ve Türkçesiyle" />
+  <title>İngilizce Okuma Metinleri | UzunYolcu</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem; }
+    header { text-align: center; margin-bottom: 2rem; }
+    h1 { color: #1e4b91; }
+    .alt-basliklar { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0 2rem 0; flex-wrap: wrap; }
+    .alt-basliklar a { background: #d9eaff; color: #1e4b91; padding: 0.7rem 1.5rem; border-radius: 7px; text-decoration: none; font-weight: bold; transition: background 0.2s; border: 1px solid #aac6e0; }
+    .alt-basliklar a:hover { background: #bad6f4; }
+    .metin-box { background: #f6faff; border: 1px solid #aac6e0; padding: 1rem; margin: 1rem auto; max-width: 700px; border-radius: 7px;}
+    .okunus { color: #20538d; font-size:0.95em; margin-bottom: .5em;}
+    .turkce { color: #444; font-style:italic;}
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888; }
+    a { color: #1e4b91; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>İngilizce Okuma Metinleri</h1>
+    <p>Kısa metinlerle pratik yap!</p>
+  </header>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
+  <section>
+    <div class="metin-box">
+      <b>ENGLISH:</b><br>
+      My name is Ahmet. I am from Turkey. I am a student. Every morning, I go to school by bus.<br>
+      <span class="okunus">
+        May neym iz Ahmet. Ay em from Törki. Ay em e stüdınt. Evri mornin, ay go tu skul bay bas.
+      </span>
+      <span class="turkce">
+        Benim adım Ahmet. Türkiye'denim. Öğrenciyim. Her sabah okula otobüsle giderim.
+      </span>
+    </div>
+    <div class="metin-box">
+      <b>ENGLISH:</b><br>
+      Today is sunny. The weather is nice. I want to go outside and play with my friends.<br>
+      <span class="okunus">
+        Tudey iz sani. Dı vedır iz nays. Ay vant tu go avtsayd end pley vit may frendz.
+      </span>
+      <span class="turkce">
+        Bugün hava güneşli. Hava güzel. Dışarı çıkıp arkadaşlarımla oynamak istiyorum.
+      </span>
+    </div>
+    <!-- Daha fazla metin eklenebilir -->
+    <p style="text-align: center; margin-top: 1.5rem;">
+      <a href="index.html">Ana Sayfa &rarr;</a>
+    </p>
+  </section>
+  <footer>
+    &copy; 2025 UzunYolcu | İngilizce Eğitim
+  </footer>
+</body>
+</html>

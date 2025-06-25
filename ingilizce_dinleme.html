@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UzunYolcu | İngilizce dinleme ve pratik için öneriler" />
+  <title>İngilizce Dinleme-Pratik | UzunYolcu</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem; }
+    header { text-align: center; margin-bottom: 2rem; }
+    h1 { color: #1e4b91; }
+    .alt-basliklar { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0 2rem 0; flex-wrap: wrap; }
+    .alt-basliklar a { background: #d9eaff; color: #1e4b91; padding: 0.7rem 1.5rem; border-radius: 7px; text-decoration: none; font-weight: bold; transition: background 0.2s; border: 1px solid #aac6e0; }
+    .alt-basliklar a:hover { background: #bad6f4; }
+    .oneriler { background: #f6faff; border: 1px solid #aac6e0; padding: 1rem; margin: 1rem auto; max-width: 700px; border-radius: 7px;}
+    .oneriler h3 { color: #20538d; margin-bottom: .5em;}
+    .oneriler ul { padding-left: 1.2em;}
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888; }
+    a { color: #1e4b91; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>İngilizce Dinleme & Pratik</h1>
+    <p>Dinleme becerini geliştirmen için öneriler</p>
+  </header>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
+  <section>
+    <div class="oneriler">
+      <h3>Youtube kanalları</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/user/EnglishClass101" target="_blank">EnglishClass101</a> (her seviyeye uygun, altyazılı)</li>
+        <li><a href="https://www.youtube.com/user/EnglishAddictwithMrDuncan" target="_blank">Mr. Duncan</a> (günlük konular, kolay anlatım)</li>
+        <li><a href="https://www.youtube.com/c/AJHoge" target="_blank">AJ Hoge</a> (dinleme ve konuşma odaklı)</li>
+      </ul>
+      <h3>Podcast/Spotify</h3>
+      <ul>
+        <li><a href="https://open.spotify.com/show/3hGm4c4X7M2kqA3nPoKxeG" target="_blank">English We Speak (BBC)</a></li>
+        <li><a href="https://open.spotify.com/show/0ZkzF2XQwW6XbR2p0aXkz4" target="_blank">6 Minute English (BBC)</a></li>
+      </ul>
+      <h3>Uygulamalar</h3>
+      <ul>
+        <li>Duolingo</li>
+        <li>BBC Learning English</li>
+        <li>Memrise</li>
+      </ul>
+    </div>
+    <p style="text-align: center; margin-top: 1.5rem;">
+      <a href="index.html">Ana Sayfa &rarr;</a>
+    </p>
+  </section>
+  <footer>
+    &copy; 2025 UzunYolcu | İngilizce Eğitim
+  </footer>
+</body>
+</html>

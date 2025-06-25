@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UzunYolcu | İngilizce deyimler ve Türkçe anlamları, okunuşları" />
+  <title>İngilizce Deyimler | UzunYolcu</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem; }
+    header { text-align: center; margin-bottom: 2rem; }
+    h1 { color: #1e4b91; }
+    .alt-basliklar { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0 2rem 0; flex-wrap: wrap; }
+    .alt-basliklar a { background: #d9eaff; color: #1e4b91; padding: 0.7rem 1.5rem; border-radius: 7px; text-decoration: none; font-weight: bold; transition: background 0.2s; border: 1px solid #aac6e0; }
+    .alt-basliklar a:hover { background: #bad6f4; }
+    table { width: 100%; max-width: 700px; margin: 0 auto; border-collapse: collapse; }
+    th, td { border: 1px solid #aac6e0; padding: 12px; text-align: center; }
+    th { background-color: #d9eaff; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888; }
+    a { color: #1e4b91; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>İngilizce Deyimler</h1>
+    <p>Kısa ve sık kullanılan deyimler, okunuşlarıyla</p>
+  </header>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
+  <section>
+    <table>
+      <tr>
+        <th>Deyim (İngilizce)</th>
+        <th>Türkçesi</th>
+        <th>Okunuş</th>
+      </tr>
+      <tr>
+        <td>break a leg</td>
+        <td>şans diliyorum</td>
+        <td>brek e leg</td>
+      </tr>
+      <tr>
+        <td>piece of cake</td>
+        <td>çok kolay</td>
+        <td>pis of keyk</td>
+      </tr>
+      <tr>
+        <td>once in a blue moon</td>
+        <td>kırk yılda bir</td>
+        <td>wans in e blu mun</td>
+      </tr>
+      <tr>
+        <td>hit the road</td>
+        <td>yola çıkmak</td>
+        <td>hit dı rod</td>
+      </tr>
+      <tr>
+        <td>under the weather</td>
+        <td>keyifsiz, hasta</td>
+        <td>andır dı vedır</td>
+      </tr>
+      <tr>
+        <td>let the cat out of the bag</td>
+        <td>sırrı ağzından kaçırmak</td>
+        <td>let dı ket aut ov dı beg</td>
+      </tr>
+      <tr>
+        <td>costs an arm and a leg</td>
+        <td>çok pahalı</td>
+        <td>kosts en arm end e leg</td>
+      </tr>
+    </table>
+    <p style="text-align: center; margin-top: 1.5rem;">
+      <a href="index.html">Ana Sayfa &rarr;</a>
+    </p>
+  </section>
+  <footer>
+    &copy; 2025 UzunYolcu | İngilizce Eğitim
+  </footer>
+</body>
+</html>
