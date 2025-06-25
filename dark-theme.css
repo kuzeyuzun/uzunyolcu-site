@@ -1,0 +1,105 @@
+body, html {
+  margin: 0; padding: 0;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  background: #181f2b;
+  color: #e4eaf5;
+}
+
+a { color: #3f8cff; text-decoration: none; transition: color .2s;}
+a:hover { color: #66aaff; }
+
+header, .navbar, .footer {
+  background: #222a36;
+  box-shadow: 0 2px 12px #0a0d1490;
+}
+
+.navbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem; height: 64px; position: sticky; top: 0; z-index: 100;
+}
+.navbar-logo { font-size: 1.4em; font-weight: bold; color: #3f8cff;}
+.navbar-links { display: flex; gap: 2rem;}
+.navbar-links a {
+  color: #e4eaf5; padding: 9px 0; border-bottom: 2px solid transparent;
+  font-weight: 500; font-size: 1.08em; letter-spacing: 0.4px;
+}
+.navbar-links a:hover, .navbar-links a.active {
+  border-bottom: 2px solid #3f8cff; color: #3f8cff;
+}
+
+.page-container { display: flex; min-height: 100vh; }
+.side-menu {
+  width: 260px; min-width: 220px; max-width: 320px;
+  background: #232c3d;
+  border-right: 1px solid #242f42;
+  padding: 42px 0 32px 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 11;
+  transition: all .2s;
+}
+.menu-section { margin-bottom: 32px; }
+.menu-title {
+  font-size: 1.07em; color: #5bbcff; font-weight: bold;
+  margin: 0 0 12px 32px; letter-spacing: 1px;
+  text-shadow: 0 1px 6px #222a3680;
+}
+
+.side-menu a {
+  display: block; padding: 11px 34px;
+  color: #b5bed2; text-decoration: none;
+  border-left: 3px solid transparent;
+  border-radius: 0 20px 20px 0;
+  font-size: 1.04em; font-weight: 500;
+  background: none; transition: all 0.18s;
+}
+.side-menu a:hover, .side-menu a.active {
+  background: #202638;
+  color: #3f8cff;
+  border-left: 3px solid #3f8cff;
+}
+
+.side-menu .menu-back, .side-menu .menu-home {
+  margin: 15px 0 0 32px; font-size: 0.97em;
+  color: #e4eaf5; display: block;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 2.5rem;}
+.card {
+  background: linear-gradient(135deg, #222a36 80%, #3f8cff10 100%);
+  border-radius: 18px; box-shadow: 0 4px 30px #0a0d1422;
+  padding: 2rem 1.2rem 1.7rem 1.5rem; display: flex; flex-direction: column; align-items: start;
+  border: 1px solid #242f42;
+  transition: transform .13s;
+}
+.card:hover { transform: translateY(-7px) scale(1.03); box-shadow: 0 12px 40px #3f8cff28;}
+.card-title { font-size: 1.25em; font-weight: bold; color: #3f8cff; margin-bottom: 0.7em;}
+.card-desc { color: #b5bed2; font-size: 1em;}
+.card-icon {font-size:2.4em; margin-bottom: 0.5em; color:#5bbcff;}
+
+.footer {
+  text-align: center;
+  color: #b5bed2;
+  font-size: 0.97em;
+  margin-top: 3rem;
+  padding: 1.3rem 0 1.5rem 0;
+  background: #222a36;
+  border-top: 1px solid #242f42;
+}
+
+@media (max-width: 900px) {
+  .page-container { flex-direction: column; }
+  .side-menu { width: 100vw; min-width: unset; max-width: unset; min-height: auto; position: static; border-right: none; border-bottom: 1px solid #242f42; padding: 10px 0 10px 0;}
+  .menu-section { margin-bottom: 0; display: inline-block;}
+  .menu-title { margin: 0 0 8px 12px;}
+  .side-menu a { display: inline-block; padding:8px 12px; border-radius:8px; margin: 0 2px;}
+  .main-content { padding: 1.3rem 1rem 1rem 1rem;}
+}
