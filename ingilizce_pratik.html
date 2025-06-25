@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="İngilizce pratik önerileri ve kendi çalışma alanın" />
+  <title>Kendi Pratiğin | UzunYolcu</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem;}
+    header { text-align: center; margin-bottom: 2rem;}
+    h1 { color: #1e4b91;}
+    .alt-basliklar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem 0;}
+    .practice-box { background:#f6faff; border:1px solid #aac6e0; border-radius:7px; padding:1em; margin-bottom:1em;}
+    ul {margin-left:1.2em;}
+    a { color: #1e4b91; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kendi Pratiğin</h1>
+    <p>İngilizceyi kendi kendine geliştirmek için öneriler</p>
+  </header>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
+  <section>
+    <div class="practice-box">
+      <b>Günlük Yazma:</b>
+      <ul>
+        <li>Her gün 1-2 basit cümle yaz: <br>
+          <i>I am at home. (Ay em et hom.)</i>
+        </li>
+        <li>Gördüğün nesneleri İngilizce olarak adlandır: <br>
+          <i>Table (teybıl), window (vindov), chair (çeir)</i>
+        </li>
+        <li>Kısa bir günlük tut: <br>
+          <i>Today is sunny. I am happy. (Tudey iz sani. Ay em hepi.)</i>
+        </li>
+      </ul>
+    </div>
+    <div class="practice-box">
+      <b>Sesli Tekrar:</b>
+      <ul>
+        <li>Ayna karşısında yüksek sesle cümleleri tekrar et.</li>
+        <li>Online telaffuz sitelerinden dinleyerek tekrar et (<a href="https://forvo.com/languages/en/" target="_blank">Forvo</a>, <a href="https://www.howtopronounce.com/english/" target="_blank">HowToPronounce</a>)</li>
+      </ul>
+    </div>
+    <div class="practice-box">
+      <b>Diyalog Yarat:</b>
+      <ul>
+        <li>Kendi kendine soru sorup cevap ver.</li>
+        <li>Bir arkadaşınla kısa pratikler yap.</li>
+      </ul>
+    </div>
+    <p style="text-align: center; margin-top: 1.5rem;">
+      <a href="index.html">Ana Sayfa &rarr;</a>
+    </p>
+  </section>
+  <footer>
+    &copy; 2025 UzunYolcu | İngilizce Eğitim
+  </footer>
+</body>
+</html>

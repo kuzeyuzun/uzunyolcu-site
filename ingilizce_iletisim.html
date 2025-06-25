@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="İngilizce iletişim örnekleri: e-posta, mesaj, mektup" />
+  <title>İletişim Örnekleri | UzunYolcu</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem;}
+    header { text-align: center; margin-bottom: 2rem;}
+    h1 { color: #1e4b91;}
+    .alt-basliklar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem 0;}
+    .comm-box { background:#f6faff; border:1px solid #aac6e0; border-radius:7px; padding:1em; margin-bottom:1em;}
+    .okunus { color:#20538d; font-size:.93em; }
+    .turkce { color:#444; font-style:italic;}
+    a { color: #1e4b91; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>İngilizce İletişim Örnekleri</h1>
+    <p>E-posta, mesaj ve mektup örnekleri</p>
+  </header>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
+  <section>
+    <div class="comm-box">
+      <b>Kısa E-posta:</b><br>
+      <div>Hello John,<br>
+      How are you? I hope you are well.<br>
+      See you.<br>
+      Ahmet</div>
+      <div class="okunus">
+        Helo Can,<br>
+        Hav ar yu? Ay hop yu ar vel.<br>
+        Si yu.<br>
+        Ahmet
+      </div>
+      <div class="turkce">
+        Merhaba John,<br>
+        Nasılsın? Umarım iyisindir.<br>
+        Görüşmek üzere.<br>
+        Ahmet
+      </div>
+    </div>
+    <div class="comm-box">
+      <b>Kısa Mesaj:</b><br>
+      <div>Hi! Are you free this weekend?</div>
+      <div class="okunus">Hay! Ar yu fri dis vikend?</div>
+      <div class="turkce">Selam! Bu hafta sonu müsait misin?</div>
+    </div>
+    <div class="comm-box">
+      <b>Mektup Başlangıcı:</b><br>
+      <div>Dear Anna,<br>
+      I am writing to you from Istanbul...</div>
+      <div class="okunus">
+        Diır Ana,<br>
+        Ay em raytin tu yu from İstanbul...
+      </div>
+      <div class="turkce">
+        Sevgili Anna,<br>
+        Sana İstanbul’dan yazıyorum...
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 1.5rem;">
+      <a href="index.html">Ana Sayfa &rarr;</a>
+    </p>
+  </section>
+  <footer>
+    &copy; 2025 UzunYolcu | İngilizce Eğitim
+  </footer>
+</body>
+</html>

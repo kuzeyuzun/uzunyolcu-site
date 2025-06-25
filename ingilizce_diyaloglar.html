@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="İngilizce günlük diyaloglar ve okunuşları" />
+  <title>İngilizce Diyaloglar | UzunYolcu</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem;}
+    header { text-align: center; margin-bottom: 2rem;}
+    h1 { color: #1e4b91;}
+    .alt-basliklar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem 0;}
+    .diyalog { background:#f6faff; border:1px solid #aac6e0; border-radius:7px; padding:1em; margin-bottom:1em;}
+    .okunus { color:#20538d; font-size:.93em; }
+    .turkce { color:#444; font-style:italic;}
+    a { color: #1e4b91; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>İngilizce Diyaloglar</h1>
+    <p>Günlük hayatta en çok karşılaşılan konuşma örnekleri</p>
+  </header>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
+  <section>
+    <div class="diyalog">
+      <b>Restoranda Sipariş:</b><br>
+      <span>- Waiter: What would you like to eat?<br>
+      - Customer: I would like a pizza, please.</span><br>
+      <span class="okunus">
+        - Veytır: Vat vud yu layk tu iit?<br>
+        - Kastımır: Ay vud layk e pizza, pliiz.
+      </span><br>
+      <span class="turkce">
+        - Garson: Ne yemek istersiniz?<br>
+        - Müşteri: Bir pizza istiyorum lütfen.
+      </span>
+    </div>
+    <div class="diyalog">
+      <b>Otobüste Yol Tarifi:</b><br>
+      <span>- Excuse me, where is the hospital?<br>
+      - It’s next to the bank.</span><br>
+      <span class="okunus">
+        - Ekskyuz mi, ver iz dı hospital?<br>
+        - Its nekst tu dı benk.
+      </span><br>
+      <span class="turkce">
+        - Afedersiniz, hastane nerede?<br>
+        - Bankanın yanında.
+      </span>
+    </div>
+    <div class="diyalog">
+      <b>Markette Alışveriş:</b><br>
+      <span>- How much is this?<br>
+      - It is five dollars.</span><br>
+      <span class="okunus">
+        - Hav maç iz dis?<br>
+        - It iz fayv dalırs.
+      </span><br>
+      <span class="turkce">
+        - Bu ne kadar?<br>
+        - Beş dolar.
+      </span>
+    </div>
+    <!-- Daha fazla diyalog eklenebilir -->
+    <p style="text-align: center; margin-top: 1.5rem;">
+      <a href="index.html">Ana Sayfa &rarr;</a>
+    </p>
+  </section>
+  <footer>
+    &copy; 2025 UzunYolcu | İngilizce Eğitim
+  </footer>
+</body>
+</html>

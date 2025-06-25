@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="İngilizce mini testler ve quiz" />
+  <title>Mini Testler | UzunYolcu</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45; padding: 2rem;}
+    header { text-align: center; margin-bottom: 2rem;}
+    h1 { color: #1e4b91;}
+    .alt-basliklar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem 0;}
+    .quiz-box { background:#f6faff; border:1px solid #aac6e0; border-radius:7px; padding:1em; margin-bottom:1em;}
+    ul {margin-left:1.2em;}
+    a { color: #1e4b91; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #888;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mini Testler</h1>
+    <p>Küçük quizlerle kendini dene!</p>
+  </header>
+  <div id="altBasliklarMenu"></div>
+  <script>
+    fetch('alt-basliklar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('altBasliklarMenu').innerHTML = html);
+  </script>
+  <section>
+    <div class="quiz-box">
+      <b>Boşluğu Doldur:</b>
+      <ul>
+        <li>I _____ a student. (am / is / are)</li>
+        <li>My name _____ Ahmet. (is / are / am)</li>
+        <li>She _____ to school every day. (go / goes / going)</li>
+      </ul>
+    </div>
+    <div class="quiz-box">
+      <b>Çeviri:</b>
+      <ul>
+        <li>Ben mutluyum. → ___________</li>
+        <li>Saat kaç? → ___________</li>
+        <li>Bugün hava güzel. → ___________</li>
+      </ul>
+    </div>
+    <div class="quiz-box">
+      <b>Kısa Test:</b>
+      <ul>
+        <li>What is "elma" in English? <br> a) apple &nbsp; b) orange &nbsp; c) banana</li>
+        <li>How do you say "günaydın"? <br> a) Good night &nbsp; b) Good morning &nbsp; c) Good afternoon</li>
+      </ul>
+    </div>
+    <p style="text-align: center; margin-top: 1.5rem;">
+      <a href="index.html">Ana Sayfa &rarr;</a>
+    </p>
+  </section>
+  <footer>
+    &copy; 2025 UzunYolcu | İngilizce Eğitim
+  </footer>
+</body>
+</html>
