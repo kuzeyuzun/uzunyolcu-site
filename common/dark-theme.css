@@ -1,90 +1,234 @@
+/* Güncellenmiş Koyu Tema - Modern ve Efektli */
+/* Font: Inter veya Roboto, fallback Arial */
 body, html {
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
   font-family: 'Inter', 'Roboto', Arial, sans-serif;
-  background: #181f2b;
+  background: linear-gradient(135deg, #181f2b 0%, #212b3b 100%);
   color: #e4eaf5;
+  min-height: 100vh;
+  transition: background 0.5s, color 0.4s;
 }
 
-a { color: #3f8cff; text-decoration: none; transition: color .2s;}
-a:hover { color: #66aaff; }
+/* Linkler */
+a {
+  color: #3f8cff;
+  text-decoration: none;
+  transition: color .22s cubic-bezier(.4,2,.6,1);
+}
+a:hover {
+  color: #66aaff;
+  text-shadow: 0 1px 8px #3f8cff33;
+}
 
+/* Header, Navbar, Footer */
 header, .navbar, .footer {
   background: #222a36;
-  box-shadow: 0 2px 12px #0a0d1490;
+  box-shadow: 0 2px 16px 0 #0a0d149c;
 }
 
 .navbar {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 2.5rem; height: 64px; position: sticky; top: 0; z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(34,42,54,0.98);
+  backdrop-filter: blur(6px);
 }
-.navbar-logo { font-size: 1.4em; font-weight: bold; color: #3f8cff;}
-.navbar-links { display: flex; gap: 2rem;}
+.navbar-logo {
+  font-size: 1.45em;
+  font-weight: bold;
+  color: #5bbcff;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px #3f8cff44;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.navbar-logo .icon {
+  font-size: 1.2em;
+  opacity: 0.85;
+}
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
 .navbar-links a {
-  color: #e4eaf5; padding: 9px 0; border-bottom: 2px solid transparent;
-  font-weight: 500; font-size: 1.08em; letter-spacing: 0.4px;
+  color: #e4eaf5;
+  padding: 9px 0;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+  font-size: 1.08em;
+  letter-spacing: 0.4px;
+  transition: color 0.2s, border-bottom 0.2s;
 }
 .navbar-links a:hover, .navbar-links a.active {
-  border-bottom: 2px solid #3f8cff; color: #3f8cff;
+  border-bottom: 2px solid #5bbcff;
+  color: #5bbcff;
 }
 
-.page-container { display: flex; min-height: 100vh; }
+/* Sayfa ve Menü */
+.page-container {
+  display: flex;
+  min-height: 100vh;
+}
 .side-menu {
-  width: 260px; min-width: 220px; max-width: 320px;
-  background: #232c3d;
-  border-right: 1px solid #242f42;
-  padding: 42px 0 32px 0;
+  width: 240px;
+  min-width: 200px;
+  max-width: 320px;
+  background: rgba(30, 36, 52, 0.97);
+  border-right: 1px solid #25304c;
+  padding: 38px 0 32px 0;
   min-height: 100vh;
   box-sizing: border-box;
   position: sticky;
   top: 0;
   z-index: 11;
-  transition: all .2s;
+  box-shadow: 2px 0 18px 0 #1a283c24;
+  transition: background 0.4s, box-shadow 0.4s, width 0.2s;
 }
-.menu-section { margin-bottom: 32px; }
+.menu-section {
+  margin-bottom: 34px;
+}
 .menu-title {
-  font-size: 1.07em; color: #5bbcff; font-weight: bold;
-  margin: 0 0 12px 32px; letter-spacing: 1px;
+  font-size: 1.13em;
+  color: #5bbcff;
+  font-weight: 600;
+  margin: 0 0 12px 30px;
+  letter-spacing: 1px;
   text-shadow: 0 1px 6px #222a3680;
 }
 
 .side-menu a {
-  display: block; padding: 11px 34px;
-  color: #b5bed2; text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 30px;
+  color: #b5bed2;
+  text-decoration: none;
   border-left: 3px solid transparent;
   border-radius: 0 20px 20px 0;
-  font-size: 1.04em; font-weight: 500;
-  background: none; transition: all 0.18s;
+  font-size: 1.04em;
+  font-weight: 500;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  transition:
+    background 0.19s,
+    color 0.18s,
+    border-left 0.20s;
 }
-.side-menu a:hover, .side-menu a.active {
-  background: #202638;
-  color: #3f8cff;
-  border-left: 3px solid #3f8cff;
+.side-menu a .icon {
+  font-size: 1.18em;
+  opacity: 0.82;
+  transition: color 0.17s;
+}
+.side-menu a:hover,
+.side-menu a.active {
+  background: linear-gradient(90deg, #223656 0%, #253d60 100%);
+  color: #6ecfff;
+  border-left: 3px solid #5bbcff;
+  box-shadow: 0 2px 24px 0 #18375e40;
+  transform: translateX(3px) scale(1.03);
+}
+.side-menu a:hover .icon,
+.side-menu a.active .icon {
+  color: #6ecfff;
+}
+.side-menu a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #5bbcff;
+  opacity: 0.7;
+  transition: transform 0.18s;
+}
+.side-menu a:hover::after,
+.side-menu a.active::after {
+  transform: translateY(-50%) scale(1);
 }
 
-.side-menu .menu-back, .side-menu .menu-home {
-  margin: 15px 0 0 32px; font-size: 0.97em;
-  color: #e4eaf5; display: block;
+/* Menüde "Geri" ve "Ana Sayfa" Linkleri */
+.side-menu .menu-back,
+.side-menu .menu-home {
+  margin: 15px 0 0 32px;
+  font-size: 0.97em;
+  color: #e4eaf5;
+  display: block;
 }
 
+/* İçerik Alanı */
 .main-content {
   flex: 1;
-  padding: 2.5rem 2rem 2rem 2rem;
-  max-width: 900px;
+  padding: 2.6rem 2.1rem 2.1rem 2.1rem;
+  max-width: 980px;
   margin: 0 auto;
+  background: rgba(28, 33, 50, 0.85);
+  box-shadow: 0 6px 32px 0 #131c2b28;
+  border-radius: 18px;
+  margin-top: 38px;
+  margin-bottom: 38px;
+  transition: background 0.5s;
 }
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 2.5rem;}
-.card {
-  background: linear-gradient(135deg, #222a36 80%, #3f8cff10 100%);
-  border-radius: 18px; box-shadow: 0 4px 30px #0a0d1422;
-  padding: 2rem 1.2rem 1.7rem 1.5rem; display: flex; flex-direction: column; align-items: start;
-  border: 1px solid #242f42;
-  transition: transform .13s;
-}
-.card:hover { transform: translateY(-7px) scale(1.03); box-shadow: 0 12px 40px #3f8cff28;}
-.card-title { font-size: 1.25em; font-weight: bold; color: #3f8cff; margin-bottom: 0.7em;}
-.card-desc { color: #b5bed2; font-size: 1em;}
-.card-icon {font-size:2.4em; margin-bottom: 0.5em; color:#5bbcff;}
 
+/* Kartlar (Öne Çıkanlar) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.card {
+  background: linear-gradient(135deg, #232a38 80%, #3f8cff13 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #0a0d1422;
+  padding: 2rem 1.2rem 1.7rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: 1px solid #25304c;
+  transition: transform .13s, box-shadow .2s;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 16px 44px #3f8cff32;
+  background: linear-gradient(135deg, #28324a 80%, #3f8cff22 100%);
+}
+.card-title {
+  font-size: 1.22em;
+  font-weight: bold;
+  color: #5bbcff;
+  margin-bottom: 0.7em;
+}
+.card-desc {
+  color: #b5bed2;
+  font-size: 1em;
+}
+.card-icon {
+  font-size: 2.4em;
+  margin-bottom: 0.5em;
+  color: #5bbcff;
+  filter: drop-shadow(0 2px 10px #3f8cff22);
+  transition: color 0.18s, filter 0.2s;
+}
+.card:hover .card-icon {
+  color: #6ecfff;
+  filter: drop-shadow(0 4px 16px #6ecfff88);
+}
+
+/* Footer */
 .footer {
   text-align: center;
   color: #b5bed2;
@@ -92,14 +236,77 @@ header, .navbar, .footer {
   margin-top: 3rem;
   padding: 1.3rem 0 1.5rem 0;
   background: #222a36;
-  border-top: 1px solid #242f42;
+  border-top: 1px solid #25304c;
+  box-shadow: 0 -4px 14px #181f2b80;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .page-container { flex-direction: column; }
-  .side-menu { width: 100vw; min-width: unset; max-width: unset; min-height: auto; position: static; border-right: none; border-bottom: 1px solid #242f42; padding: 10px 0 10px 0;}
-  .menu-section { margin-bottom: 0; display: inline-block;}
-  .menu-title { margin: 0 0 8px 12px;}
-  .side-menu a { display: inline-block; padding:8px 12px; border-radius:8px; margin: 0 2px;}
-  .main-content { padding: 1.3rem 1rem 1rem 1rem;}
+  .page-container {
+    flex-direction: column;
+  }
+  .side-menu {
+    width: 100vw;
+    min-width: unset;
+    max-width: unset;
+    min-height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid #25304c;
+    padding: 10px 0 10px 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .menu-section {
+    margin-bottom: 0;
+    display: inline-block;
+  }
+  .menu-title {
+    margin: 0 0 8px 12px;
+  }
+  .side-menu a {
+    display: inline-flex;
+    padding: 9px 14px;
+    border-radius: 8px;
+    margin: 0 2px;
+  }
+  .main-content {
+    padding: 1.4rem 1.1rem 1.1rem 1.1rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .card-grid {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Küçük efekt animasyonları */
+@media (hover: hover) and (pointer: fine) {
+  .side-menu a {
+    will-change: transform;
+    transition:
+      background 0.22s cubic-bezier(.4,2,.6,1),
+      color 0.18s,
+      border-left 0.20s,
+      transform 0.19s;
+  }
+  .side-menu a:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Basit fade-in animasyonu (isteğe bağlı eklenebilir) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.main-content, .card, .side-menu a, .navbar {
+  animation: fadeInUp 0.5s cubic-bezier(.4,2,.4,1) both;
 }
