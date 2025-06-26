@@ -1,57 +1,136 @@
-/* Sol Menü ve Sayfa Düzeni İçin CSS */
+/* Koyu Tema Side Menü ve Sayfa Düzeni */
 body, html {
-  margin: 0; padding: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #eef6ff, #ffffff); color: #1f2e45;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #1b2330 0%, #232b3b 100%);
+  color: #e6eaf3;
+  min-height: 100vh;
+  transition: background 0.55s cubic-bezier(.4,2,.6,1), color 0.45s;
 }
-.page-container { display: flex; min-height: 100vh; }
+.page-container {
+  display: flex;
+  min-height: 100vh;
+}
 .side-menu {
-  width: 230px;
-  background: #e5f2ff;
-  border-right: 1px solid #aac6e0;
-  padding: 36px 0 36px 0;
+  width: 240px;
+  background: rgba(25, 35, 55, 0.96);
+  border-right: 1.5px solid #202a3c;
+  padding: 38px 0 36px 0;
   min-height: 100vh;
   box-sizing: border-box;
   position: sticky;
   top: 0;
   z-index: 11;
+  box-shadow: 2px 0 18px 0 rgba(26,40,60,0.13);
+  transition: background 0.4s, box-shadow 0.4s;
 }
 .menu-section {
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 .menu-title {
-  font-size: 1.09em;
-  color: #1e4b91;
-  font-weight: bold;
-  margin: 0 0 10px 26px;
+  font-size: 1.13em;
+  color: #5da8ff;
+  font-weight: 600;
+  margin: 0 0 12px 30px;
   letter-spacing: 1px;
+  text-shadow: 0 1px 6px #2225;
 }
 .side-menu a {
-  display: block;
-  padding: 9px 28px;
-  color: #234;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 30px;
+  color: #e7edf9;
   text-decoration: none;
   border-left: 3px solid transparent;
-  transition: all 0.2s;
-  font-size: 1em;
-  border-radius: 0 16px 16px 0;
+  transition: 
+    background 0.22s cubic-bezier(.4,2,.6,1),
+    color 0.18s,
+    border-left 0.20s;
+  font-size: 1.04em;
+  border-radius: 0 20px 20px 0;
   font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.side-menu a .icon {
+  font-size: 1.18em;
+  opacity: 0.82;
+  transition: color 0.17s;
 }
 .side-menu a:hover,
 .side-menu a.active {
-  background: #cbe6ff;
-  color: #1e4b91;
-  border-left: 3px solid #1e4b91;
+  background: linear-gradient(90deg, #223656 0%, #253d60 100%);
+  color: #6ecfff;
+  border-left: 3px solid #5da8ff;
+  box-shadow: 0 2px 24px 0 #18375e40;
+  transform: translateX(3px) scale(1.03);
+  transition: 
+    background 0.22s cubic-bezier(.4,2,.6,1),
+    color 0.18s,
+    border-left 0.20s,
+    transform 0.19s;
 }
+.side-menu a:hover .icon,
+.side-menu a.active .icon {
+  color: #6ecfff;
+}
+
+.side-menu a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #5da8ff;
+  opacity: 0.7;
+  transition: transform 0.18s;
+}
+.side-menu a:hover::after,
+.side-menu a.active::after {
+  transform: translateY(-50%) scale(1);
+}
+
 .main-content {
   flex: 1;
-  padding: 2.5rem 2rem 2rem 2rem;
-  max-width: 900px;
+  padding: 2.6rem 2.1rem 2.1rem 2.1rem;
+  max-width: 980px;
   margin: 0 auto;
+  background: rgba(28, 33, 50, 0.85);
+  box-shadow: 0 6px 32px 0 #131c2b28;
+  border-radius: 18px;
+  margin-top: 38px;
+  margin-bottom: 38px;
+  transition: background 0.5s;
 }
+
+/* Responsive */
 @media (max-width: 900px) {
   .page-container { flex-direction: column; }
-  .side-menu { width: 100vw; min-height: auto; position: static; border-right: none; border-bottom: 1px solid #aac6e0; padding: 10px 0 10px 0;}
+  .side-menu { width: 100vw; min-height: auto; position: static; border-right: none; border-bottom: 1.5px solid #202a3c; padding: 10px 0 10px 0; border-radius:0; box-shadow:none;}
   .menu-section { margin-bottom: 0; display: inline-block;}
   .menu-title { margin: 0 0 8px 12px;}
-  .side-menu a { display: inline-block; padding:8px 12px; border-radius:8px; margin: 0 2px;}
-  .main-content { padding: 1.3rem 1rem 1rem 1rem;}
+  .side-menu a { display: inline-flex; padding:9px 14px; border-radius:8px; margin: 0 2px;}
+  .main-content { padding: 1.4rem 1.1rem 1.1rem 1.1rem; margin-top:16px; margin-bottom:16px;}
+}
+
+/* Küçük efektler için animasyonlar */
+@media (hover: hover) and (pointer: fine) {
+  .side-menu a {
+    will-change: transform;
+    transition: 
+      background 0.22s cubic-bezier(.4,2,.6,1),
+      color 0.18s,
+      border-left 0.20s,
+      transform 0.19s;
+  }
+  .side-menu a:active {
+    transform: scale(0.98);
+  }
 }
