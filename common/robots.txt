@@ -1,1 +1,14 @@
+# Uzunyolcu Site - robots.txt
+# Tüm arama motorlarına ana klasör hariç her şeyi engelle (örnek yapı)
+User-agent: *
+Disallow: /common/
+Disallow: /api/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /drafts/
+Allow: /
 
+# Site haritası ekleyebilirsiniz (varsa)
+# Sitemap: https://uzunyolcu.com/sitemap.xml
+
+# Not: Gerekirse hassas klasörleri buraya ekleyebilirsiniz.
